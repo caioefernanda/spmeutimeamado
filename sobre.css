@@ -11,7 +11,9 @@
 img { max-width: 100%; height: auto; display: block; }
 
 body {
-    margin: 0;   
+    width: 80%; 
+    max-width: 940px;
+    margin: auto;   
     font-family: system-ui , Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     color: var(--text);
     background: linear-gradient(180deg, var(--bg), #111);
@@ -40,6 +42,8 @@ body > *:first-child { margin-top: 20px; }
 
 
 figure {
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 50px 0;
     padding: 12px;
     text-align: center;
@@ -100,4 +104,33 @@ figure img { width: 100%; border-radius: var(--radius); }
     .Fundadores { float: none; width: 100%; margin: 12px 0; }
     .contato__seção, .contato__seção--telefone { display: block; margin-left: 0; }
     .contato__info { padding-left: 0; }
+}
+
+@media (max-width: 622px) { 
+    .Fundadores{
+        float: none;
+        margin: 0   auto;
+    }
+}
+
+@media (max-width: 622px) {
+    .contato__subtitulo {
+        display: block;
+        margin-bottom: 0;
+    }
+    .contato__info {
+        padding-left: 5px;
+        font-size: .92em;
+        border-left: 2px solid lightgrey;
+    }
+    .rodape {
+        font-size: .92em;
+    }
+}
+
+@media (max-width: 342px) {
+    .contato__info-descrição {
+        display: block;
+        margin-left: 1em;
+    }
 }
